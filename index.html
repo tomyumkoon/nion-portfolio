@@ -1,29 +1,46 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>NIONのポートフォリオ</title>
-  <link rel="stylesheet" href="style.css"> <!-- CSSファイル名に注意 -->
+  <meta charset="UTF-8" />
+  <title>NION's Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Fonts: Barlow Condensed -->
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
- 
+  <div class="background-gif"></div>
 
-  <section class="works">
-    <h2>✨ 作品紹介 ✨</h2>
+  <h1>Hello, I'm <span class="highlight">NION</span></h1>
+
+  <div class="section">
+    <p>I like to play hard.<br />
+    You and NION are a UNION.</p>
+  </div>
+
+  <div class="section">
+    <h2>My Work</h2>
     <div class="work-item">
-      <img src="images/sample1.jpg" alt="作品1">
-      <h3>portfolio</h3>
-      <p>初めて作ったカラフルなサイトのデザインです。</p>
+      <!-- 画像をクリックで page2.html へ -->
+      <a href="page2.html">
+        <img src="images/sample1.png" alt="Work Sample" class="clickable-image" />
+      </a>
+      <p>Colorful websites, playful design, strong identity.</p>
     </div>
-    <!-- ここに作品をどんどん追加していけます -->
-  </section>
+    <a href="#" class="button">ORDER NOW</a>
+  </div>
 
-  <section class="contact">
-    <h2>📮 gahaha</h2>
+  <div class="section">
+    <h2>Contact</h2>
     <p>Email: nion@example.com</p>
-  </section>
+  </div>
 </body>
 </html>
-.work-item {
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-}
+
+<div class="section">
+  <h2>Contact</h2>
+  <a href="https://www.instagram.com/nion_vant?igsh=ajZkYzlza2ZqYWE2&utm_source=qr" target="_blank" class="button insta-button">
+    Follow on Instagram
+  </a>
+</div>

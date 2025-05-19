@@ -1,82 +1,150 @@
 body {
-  font-family: 'Helvetica Neue', sans-serif;
-  background-image: url('images/background.gif');
-  background-size: cover;           /* 画面にフィットさせる */
-  background-position: center;      /* 中央に配置 */
-  background-repeat: no-repeat;     /* 繰り返さない */
-  background-attachment: fixed;     /* スクロールしても背景は固定 */
   margin: 0;
-  padding: 0;
-  min-height: 100vh;                /* 高さが100%になるようにする */
-  color: #333;
-}
-header {
-  background-color: rgba(255, 111, 145, 0.9); /* 少し透明なピンク */
-  color: #fff;
-  padding: 50px 20px;
+  padding: 60px 20px;
+  background-color: #061c3f; /* ネイビーブルー */
+  color: #fff200; /* 明るい黄色 */
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 600;
   text-align: center;
+  line-height: 1.6;
 }
 
-header h1 {
-  font-size: 3em;
-  margin: 0;
+h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 40px;
 }
 
-header p {
-  font-size: 1.2em;
-  margin-top: 10px;
+.highlight {
+  color: #ff0070; /* ビビッドピンク */
 }
 
-.works {
-  background-color: #fef9ef;
-  padding: 40px 20px;
-  text-align: center;
+.section {
+  margin-bottom: 80px;
 }
 
-.works h2 {
-  color: #ff9671;
-  margin-bottom: 30px;
+.section h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 20px;
 }
 
-.work-item {
-  background: #f9f871;
-  border-radius: 12px;
+.button {
   display: inline-block;
-  padding: 20px;
-  margin: 10px;
-  width: 250px;
-  box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+  background-color: #fff200;
+  color: #061c3f;
+  padding: 16px 32px;
+  font-size: 1.6rem;
+  font-weight: 800;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: transform 0.2s ease;
+  margin-top: 20px;
 }
 
+.button:hover {
+  transform: scale(1.05);
+}
 .work-item img {
   max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+.background-gif {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url('images/background.gif') center center / cover no-repeat;
+  opacity: 0.3;
+  z-index: -1;
+  pointer-events: none;
+}
+.work-item img {
+  width: 25%;
+  height: auto;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+.clickable-image {
+  width: 25%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  cursor: pointer; /* ← これがポイント */
+  transition: transform 0.2s ease;
+}
+
+.clickable-image:hover {
+  transform: scale(1.05); /* ちょっと拡大してアクティブ感を出す */
+}
+.clickable-image {
+  width: 25%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.clickable-image:hover {
+  transform: scale(1.05);
+}
+/* スマホ（最大幅768px以下）のときだけ反映されるスタイル */
+@media (max-width: 768px) {
+  body {
+    padding: 40px 16px;
+    font-size: 1.2rem;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  .section h2 {
+    font-size: 1.8rem;
+  }
+
+  .clickable-image,
+  .work-item img {
+    width: 80%; /* スマホでは広めに表示 */
+  }
+
+  .button {
+    font-size: 1.2rem;
+    padding: 14px 28px;
+  }
+}
+.social-link {
+  color: #fff200;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.social-link:hover {
+  text-decoration: underline;
+  color: #ff0070;
+}
+.insta-button {
+  background-color: #fff200; /* ビビッドイエロー */
+  color: #0a1e3f;             /* 濃紺（背景と同じトーン） */
+  padding: 16px 32px;
+  font-size: 1.3rem;
+  font-weight: 800;
   border-radius: 8px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 20px;
+  transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
-.contact {
-  background-color: #caffbf;
-  text-align: center;
-  padding: 30px;
-}
-
-.contact h2 {
-  margin-bottom: 10px;
-  color: #06d6a0;
-}
-.works {
-  background-color: rgba(255, 255, 255, 0.7); /* 白っぽくて背景が透ける */
-  padding: 40px 20px;
-  text-align: center;
-  border-radius: 20px;
-  margin: 30px auto;
-  max-width: 700px;
-}
-
-.contact {
-  background-color: rgba(255, 255, 255, 0.7); /* 同様に半透明 */
-  text-align: center;
-  padding: 30px;
-  border-radius: 20px;
-  margin: 30px auto;
-  max-width: 700px;
+.insta-button:hover {
+  transform: scale(1.05);
+  background-color: #ffef00; /* 少し明るい黄色 */
 }
