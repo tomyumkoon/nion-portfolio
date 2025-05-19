@@ -148,3 +148,45 @@ h1 {
   transform: scale(1.05);
   background-color: #ffef00; /* 少し明るい黄色 */
 }
+.clock {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #fff200;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.clock-icon {
+  width: 28px;
+  height: 28px;
+}
+.clock {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  font-size: 2.4rem; /* ← 約200%にアップ（1.2rem → 2.4rem） */
+  font-weight: 600;
+  color: #fff200;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+@media (max-width: 768px) {
+  .clock {
+    font-size: 1.6rem; /* スマホでは少し小さめにする */
+  }
+}
+.clock-icon {
+  width: 56px;
+  height: 56px;
+}
+@media (max-width: 768px) {
+  .clock-icon {
+    width: 36px;
+    height: 36px;
+  }
+}
