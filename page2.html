@@ -1,14 +1,38 @@
-<!-- page2.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>More About This Work</title>
+  <title>NION – Project Video</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-  <h1>This is the detail page</h1>
-  <p>Here you can write more about the selected project.</p>
-  <a href="index.html" class="button">← Back</a>
+
+<body class="page2">
+  <h1>Watch the Project</h1>
+
+  <div class="video-row">
+    <!-- 1つ目：100% -->
+    <div class="video-box full">
+      <iframe 
+        src="https://www.youtube.com/embed/xYuCz00YSQw?rel=0&controls=0&modestbranding=1"
+        title="Video 1"
+        allowfullscreen
+        loading="lazy">
+      </iframe>
+    </div>
+
+    <!-- 2つ目：60%（修正済） -->
+    <div class="video-box small">
+      <iframe 
+        src="https://www.youtube.com/embed/50aV4Hd-oQ0?rel=0&controls=0&modestbranding=1"
+        title="Video 2"
+        allowfullscreen
+        loading="lazy">
+      </iframe>
+    </div>
+  </div>
+
+  <a href="index.html" class="button">← Back to Home</a>
 </body>
 </html>
